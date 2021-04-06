@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.title{
+    text-align: center;
+}
+
+.cell{
+    border:1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+
+}
+#frame{
+    height: 70vh;
+    width: 70vh;
+    border:1px solid red;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
