@@ -12,13 +12,15 @@ function display(){
     clearInterval(timeImg);
     if (randImg) {
         document.querySelector(`[data-id="${randImg}"]`).style.backgroundImage = '';   
-
+        box.classList.remove('flip-vertical-left');
     }
     randImg = Math.floor(Math.random()* (size)+1);
-    box = document.querySelector(`[data-id="${randImg}"]`);
     //console.log(randImg);
+    
+    box = document.querySelector(`[data-id="${randImg}"]`);
+    box.classList.add('flip-vertical-left');
     box.style.backgroundImage= "url('divine.jpg')";
-    timeImg = setInterval(nextTurn , 1000);
+    timeImg = setInterval(nextTurn , 1000, console.log(randImg));
     
 }
 function nextTurn(){
@@ -59,7 +61,7 @@ document.querySelector('#button').addEventListener('click' , () => {
     frame.innerHTML = '';
     score = 0;
     randImg=null;
-    console.log(size);
+    // console.log(size);
     for (let i = 1; i <= size; i++) {
         frame.innerHTML += `<div data-id="${i}" class='cell'></div>`;
     }
@@ -75,7 +77,7 @@ document.querySelector('#button').addEventListener('click' , () => {
 frame.addEventListener('click', (el) =>{
     el=el.target.dataset.id;
     if(el == randImg){
-        console.log(+1);
+        // console.log(+1);
         score += 1;
         // console.log(el);
     }else{
