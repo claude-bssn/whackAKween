@@ -5,6 +5,8 @@
 
 .title{
     text-align: center;
+    font-size: 10vh;
+    color: pink;
 }
 
 .cell{
@@ -15,11 +17,30 @@
     background-size: cover;
 
 }
+main{
+    display: flex;
+    justify-content: center;
+    
+}
+.gameboard{
+    display: flex;
+    flex-direction: column;
+}
+
+.headerBoard{
+    display: flex;
+    justify-content: space-evenly;
+    width: 70vh;
+
+}
+.point{
+    display: flex;
+}
 #frame{
     height: 70vh;
     width: 70vh;
     border:1px solid red;
-    display: flex;
+    display: none;
     justify-content: center;
     flex-wrap: wrap;
 }

@@ -11,19 +11,33 @@
 <body>
     <header>
         <p class="title">Whack it Gurl!</p>
-        <div class="option">
-            <select name="" id="size">
-                <option value="9">3x3</option>
-                <option value="16">4x4</option>
-                <option value="25">5x5</option>
-            </select>
-            <button id="button">ok</button>
-        </div>
+        
     </header>
     <main>
-        <div id="frame">
+        <div class="gameBoard">
+            <div class="headerBoard">
+                <div class="option">
+                    <select name="" id="size">
+                        <option value="9">3x3</option>
+                        <option value="16">4x4</option>
+                        <option value="25">5x5</option>
+                    </select>
+                    <button id="button">ok</button>
+                </div>
+                <div class="point">
+                    <p>Point </p>
+                    <p class=" score"></p>
 
+                </div>
+                <div id="timer">
+                    <p class="timer"></p>
+
+                </div>
+            </div>
+            <div id="frame">
+            </div>
         </div>
+        
     </main>
     <footer>
 
